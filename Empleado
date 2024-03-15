@@ -1,0 +1,34 @@
+
+package poo_empleado_ejercicio_propuesto22;
+
+import java.util.Scanner;
+
+public class POO_Empleado_Ejercicio_Propuesto22 {
+
+    public static void main(String[] args) {
+        Scanner empleado = new Scanner(System.in);
+        
+        //Variables
+        String nombre;
+        int horas_trabajadas, valor_hora, salario;
+        
+        //Ingresos por usuario
+        System.out.println("Ingrese el nombre del empleado: ");
+        nombre = empleado.next();
+        System.out.println("Ingrese el numero de horas trabajadas al mes: ");
+        horas_trabajadas = empleado.nextInt();
+        System.out.println("Ingrese el salario basico por hora: ");
+        valor_hora = empleado.nextInt();
+        
+        salario = valor_hora*horas_trabajadas;
+        
+        if (salario > 450000){
+            System.out.println("El nombre del empleado es: " + nombre + "\nSu salario mensual es: " + salario);
+        }
+        else{
+            System.out.println("El nombre del empleado es: " + nombre);
+        }
+        empleado.close();
+    }
+    
+}
